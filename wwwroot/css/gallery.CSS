@@ -1,0 +1,273 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap; /*vou indicar que ele pode quebrar entao quebra quando diminue a tela*/
+  max-width: 800px;
+  margin: 0 auto; /*para alinhar ao centro quando passar dos 800 */
+  position: relative;
+  top: 80rem;
+  left: -8rem;
+}
+
+.flex > div {
+  flex: 1 1 200px; /*flex: 1 quero que ele se expanda /  flex: 1 1 quero que ele fique menor / flex: 1 1 200px; quero que ele tenha essa base de 200px sempre se nao tiver ele quebra*/
+  margin: 10px; /*vai dar uma margin entre eles em todos os lados*/
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  position: relative;
+  top: -5rem;
+}
+
+img.ga1 {
+  position: relative;
+  height: 14rem;
+}
+
+p.p1 {
+  position: relative;
+  width: 19rem;
+}
+
+img.ga2 {
+  position: relative;
+  height: 14rem;
+  left: -6rem;
+  width: 18.7rem;
+}
+
+p.p2 {
+  position: relative;
+  width: 19rem;
+  left: -6rem;
+}
+
+img.ga3 {
+  position: relative;
+  height: 13.99rem;
+  top: -22.3rem;
+  width: 18.7rem;
+  left: 38rem;
+}
+
+img.ga4 {
+  position: relative;
+  height: 14.1rem;
+  left: 13rem;
+
+  top: -64.9rem;
+  width: 18.66rem;
+}
+
+p.p3 {
+  position: relative;
+  top: -22.2rem;
+  left: 38rem;
+  width: 19rem;
+}
+
+img.ga4 {
+  position: relative;
+  height: 14.1rem;
+  left: 13rem;
+
+  top: 1.09rem;
+  width: 18.66rem;
+}
+
+p.p5 {
+  position: relative;
+  top: -21.3rem;
+  left: 0.1rem;
+  width: 19rem;
+}
+
+img.ga6 {
+  position: relative;
+  height: 14rem;
+  left: -6rem;
+  top: -21.4rem;
+  width: 18.66rem;
+}
+
+p.p6 {
+  position: relative;
+  top: -21.36rem;
+  left: -5.9rem;
+  width: 19rem;
+}
+
+img.ga5 {
+  position: relative;
+  height: 14rem;
+  left: 0rem;
+  top: -21.4rem;
+  width: 18.66rem;
+}
+
+p.p4 {
+  position: relative;
+  /* height: 14rem; */
+  left: 13rem;
+  width: 19rem;
+  top: 1rem;
+}
+
+img.ga7 {
+  position: relative;
+  height: 14rem;
+  left: 0rem;
+  top: -21.4rem;
+  width: 18.66rem;
+}
+
+p.p7 {
+  position: relative;
+  top: -21.3rem;
+  width: 19rem;
+}
+
+img.ga8 {
+  position: relative;
+  height: 14rem;
+  left: -6rem;
+  top: -21.4rem;
+  width: 18.66rem;
+}
+
+p.p8 {
+  position: relative;
+  top: -21.3rem;
+  left: -6rem;
+  width: 19rem;
+}
+
+img.ga9 {
+  position: relative;
+  height: 13.89rem;
+  left: 38rem;
+  top: -43.69rem;
+  width: 18.66rem;
+}
+
+p.p9 {
+  position: relative;
+  top: -43.6rem;
+  left: 38rem;
+  width: 19rem;
+}
+
+img.ga10 {
+  position: relative;
+  height: 14.1rem;
+  left: 13rem;
+  top: -21.91rem;
+  width: 18.66rem;
+}
+
+p.p10 {
+  position: relative;
+  /* height: 14rem; */
+  left: 13rem;
+  width: 19rem;
+  top: -22rem;
+}
+
+img.ga11 {
+  position: relative;
+  height: 14rem;
+  left: 0rem;
+  top: -44.4rem;
+  width: 18.66rem;
+}
+
+p.p11 {
+  position: relative;
+  top: -44.3rem;
+  left: 0.1rem;
+  width: 19rem;
+}
+
+img.ga12 {
+  position: relative;
+  height: 14rem;
+  left: -6rem;
+  top: -44.4rem;
+  width: 18.66rem;
+}
+
+p.p12 {
+  position: relative;
+  top: -21.36rem;
+  left: -5.9rem;
+  width: 19rem;
+  position: relative;
+  top: -44.36rem;
+  left: -5.9rem;
+  width: 19rem;
+}
+
+img.lo1 {
+  width: 70%;
+  height: 14%;
+  position: absolute;
+  left: 50%;
+  top: 14%;
+  transform: translate(-50%, -50%);
+  /* background-image: url(caveiraV.jpeg); */
+  /* background-size: 100% 100%; */
+  /* box-shadow: 1px 2px 10px 5px #282626; */
+  /* animation: slider 9s infinite linear; */
+  /* table-layout: fixed; */
+}
+
+img.lo2 {
+  width: 70%;
+  height: 14%;
+  position: absolute;
+  left: 50%;
+  top: 29%;
+  transform: translate(-50%, -50%);
+  /* background-image: url(caveiraV.jpeg); */
+  /* background-size: 100% 100%; */
+  /* box-shadow: 1px 2px 10px 5px #282626; */
+  /* animation: slider 9s infinite linear; */
+  /* table-layout: fixed; */
+}
+
+img.lo3 {
+  width: 67%;
+  height: 10%;
+  position: absolute;
+  left: 48.8%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  /* background-image: url(caveiraV.jpeg); */
+  /* background-size: 100% 100%; */
+  /* box-shadow: 1px 2px 10px 5px #282626; */
+  /* animation: slider 9s infinite linear; */
+  /* table-layout: fixed; */
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}
+
+.navbar {
+  width: 93.375rem;
+  padding-right: 32.75rem;
+  margin-top: 3rem;
+  margin-left: -222px;
+}
+
+.backgroundFinal {
+  position: relative;
+  top: 47.5rem;
+  width: 146.2%;
+  padding-left: -20%;
+  /* left: -50%; */
+  margin-inline: -21%;
+  height: 0%;
+}

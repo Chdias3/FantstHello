@@ -1,0 +1,248 @@
+html {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.box-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 35px 15px;
+  width: 100%;
+  position: relative;
+  top: -1rem;
+  left: 15rem;
+  z-index: 40;
+}
+
+@media screen and (min-width: 1380px) {
+  .box-container {
+    flex-direction: row;
+  }
+}
+
+.box-item {
+  position: relative;
+  /* -webkit-backface-visibility: hidden; */
+  width: 415px;
+  margin-bottom: 35px;
+  max-width: 100%;
+  box-shadow: 0.0625rem 0.125rem 0.625rem 0.3125rem #e50c0c;
+  height: 28rem;
+}
+
+.flip-box {
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.flip-box-front,
+.flip-box-back {
+  /* background-size: cover; */
+  background-position: center;
+  border-radius: 8px;
+  min-height: 448px;
+  -ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  /* background-size: cover; */
+  background-position: center;
+  border-radius: 8px;
+  min-height: 436px;
+  -ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-front {
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-back {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box .inner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 60px;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -ms-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+}
+
+.flip-box-header {
+  font-size: 20px;
+}
+
+.flip-box p {
+  font-size: 19px;
+  line-height: 1.5em;
+}
+
+.flip-box-img {
+  margin-top: 25px;
+}
+
+.flip-box-button {
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 2px;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  position: relative;
+  top: 20px;
+  padding: 11px 20px;
+  text-transform: uppercase;
+  box-shadow: 0.0625rem 0.125rem 0.624rem 0.3125rem #e50c0c;
+}
+
+.tarea {
+  position: relative;
+  left: 0rem;
+  top: 0rem;
+  width: 19rem;
+  height: 6rem;
+}
+
+.textarea {
+  overflow: auto;
+  resize: vertical;
+  position: relative;
+  height: 9rem;
+  width: 18rem;
+  left: 0rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  position: relative;
+  top: -5rem;
+}
+
+button.flip-box-button:hover {
+  background-color: red;
+  color: #8f1919;
+}
+
+.backgroundFinal {
+  position: relative;
+  top: 6rem;
+  width: 270.46%;
+  padding-left: -20%;
+  /* left: -50%; */
+  margin-inline: -23%;
+  height: 0%;
+}
+
+.backgroundFinal {
+  position: relative;
+  top: 6rem;
+  width: 277.46%;
+  padding-left: -20%;
+  /* left: -50%; */
+  margin-inline: -23%;
+  height: 0%;
+}
+
+footer.section {
+  position: relative;
+  top: -1.375rem;
+}
+
+a.nav-link.logo.logo-alt {
+  margin: 0rem;
+  position: relative;
+  top: -2rem;
+  color: aliceblue;
+  left: -4.9rem;
+}
+
+.flip-box .inner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 60px;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  -ms-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 71%;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}

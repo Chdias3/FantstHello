@@ -1,0 +1,202 @@
+@{
+  ViewData["Title"] = "Carrinho";
+}
+
+@using fantastHello.Models
+@using Microsoft.AspNetCore.Http;
+@model List<itemOrder>
+
+<link rel="stylesheet" href="/assets/fonts/style.css">
+<link rel="stylesheet" href="/CSS/home.CSS">
+<link rel="stylesheet" href="/CSS/accessories.CSS">
+<link rel="stylesheet" href="/CSS/cart.CSS">
+
+@* logo ------------- *@
+<nav class="logo-cart">
+  @* logo ------------- *@
+  <div>
+    <a href="/Home/home">
+      <img class="logo" src="~/CSS/img/logo.jpeg" />
+    </a>
+  </div>
+</nav>
+
+@* menu ---------- *@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+        <ul class="navbar-nav flex-grow-1">
+
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/Home/home/#about"><strong> Sobre
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="stories"><strong> Historias
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/itemOrder/Insert/#books3"><strong> Livros
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="itemOrder" asp-action="Insert"><strong> Acessorios
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="articles"><strong> Artigos
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="gallery"><strong> Galeria de
+                foto
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="galleryVideo"><strong> Galeria
+                de video
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/Home/home/#contactNow"><strong>Contato</strong></a>
+          </li>
+
+          @if (Context.Session.GetInt32("IdUsuario") == null)
+          {
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Insert"><strong>
+                  Cadastrar usuario</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Login"><strong>
+                  Login</strong></a>
+            </li>
+          }
+          else
+          {
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="List"><strong> Usuarios
+                  cadastrados</strong></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Logout"><strong>
+                  Logout</strong></a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<h1>@ViewData["Title"]</h1>
+@* if (@item.value_unitary == 100) *@
+@* { *@
+<table border="2">
+  <tbody>
+
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        @{
+          double total = 0, sumTotal = 0;
+        }
+        @foreach (itemOrder item in Model)
+        {
+          <div class="col-md-4">
+            <article class="article-ne">
+              <img src="@item.productPhoto" class="img-fluid rounded-start" alt="...">
+            </article>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">@item.description</h5>
+              <p class="card-text">Id do Produto: @item.idProduct</p>
+              <p class="card-text">Id do usuário logado: @item.idUser</p>
+              <p class="card-text">Valor do Produto: @item.value_unitary.ToString("C")</p>
+              <p class="card-text">Quantidade: @item.quantity</p>
+              
+              @{
+                total = item.quantity * item.value_unitary;
+
+                sumTotal += total;
+              }
+
+              <a class="btn btn-outline-danger" href="/itemOrder/ToUpdate?idProduct=@item.idProduct">Editar</a>
+              <a class="btn btn-outline-danger" href="/itemOrder/Delete?idProduct=@item.idProduct">Remover</a>
+
+            </div>
+          </div>
+        }
+        <li class="list-group-item">Total: @sumTotal.ToString("C")</li>
+      </div>
+    </div>
+  </tbody>
+</table>
+@* } *@
+@* else *@
+@* { *@
+
+@* <table border="2">
+  <tbody>
+
+  <div class="card mb-3 card2" style="max-width: 540px;">
+  <div class="row g-0">
+  <div class="col-md-4">
+  <article class="article-ne">
+  <img src="@item.productPhoto" class="img-fluid rounded-start" alt="...">
+  </article>
+  </div>
+  <div class="col-md-8">
+  <div class="card-body">
+  <h5 class="card-title">@item.description</h5>
+  <p class="card-text">Identificação do Produto: @item.idProduct</p>
+  <p class="card-text">Valor do Produto: @item.value_unitary.ToString("C")</p>
+  <p class="card-text">Quantidade: @item.quantity</p>
+  @{
+  total = item.quantity * item.value_unitary;
+
+  sumTotal += total;
+  }
+
+  <a class="btn btn-outline-danger" href="/itemOrder/ToUpdate?idProduct=@item.idProduct">Editar</a>
+  <a class="btn btn-outline-danger" href="/itemOrder/Delete?idProduct=@item.idProduct">Remover</a>
+
+  </div>
+  </div>
+  <li class="list-group-item">Total: @sumTotal.ToString("C")</li>
+  </div>
+  </div>
+  </tbody>
+  </table> *@
+@* } *@
+
+<a class="nav-link regNew" href="Insert">Registrar novo pedido</a>
+
+<img class="imgGhost" src="~/CSS/img/backgroundInput.jpg" alt="">
+
+<!--footer-->
+<footer class="section">
+  <div class="cont grid">
+    <div class="brand">
+      <a class="nav-link logo logo-alt" href="#">Fantasthello.com</a>
+      <p class="subtitle">©2021 Fantasthello.</p>
+      <p class="subtitle">Todos os direitos reservados.</p>
+    </div>
+    <div class="social grid">
+      <a class="nav-link" href="https://instagram.com" target="_blank">
+        <i class="icon-instagram"></i>
+      </a>
+      <a class="nav-link" href="https://facebook.com" target="_blank">
+        <i class="icon-facebook"></i></a>
+      <a class="nav-link" href="https://youtube.com" target="_blank"><i class="icon-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<img class="backgroundFinal" src="~/CSS/img/backgroundFinal.jpeg" />

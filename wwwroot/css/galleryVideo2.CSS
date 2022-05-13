@@ -1,0 +1,125 @@
+.gallery .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gallery .control-button:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+  position: relative;
+  margin-bottom: -32rem;
+  top: -7rem;
+}
+
+.gallery .item {
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+  /* background: #4d87e2; */
+}
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 20rem;
+  margin-bottom: 70rem;
+  top: 19rem;
+  left: -10.3rem;
+}
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 0.02rem;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+.controls {
+  position: relative;
+  top: 27rem;
+}
+
+.items-3 .control-button:nth-of-type(1),
+.items-3 .item:nth-of-type(1) {
+  animation-delay: -2s;
+  position: relative;
+  left: 13rem;
+}
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+  position: relative;
+  left: 13rem;
+}
+
+.gallery .control-operator:target ~ .item {
+  pointer-events: none;
+  opacity: 0;
+  animation: none;
+  /* position: relative; */
+  left: 13rem;
+}
+
+a.controle-button {
+  position: relative;
+  top: -2rem;
+  left: 35rem;
+  font-size: 2rem;
+}
+
+a {
+  color: red;
+}
+
+.descV::before {
+  content: '';
+  height: 155.4%;
+  width: 103.99%;
+  background: #0c0b0c;
+  box-shadow: 1px 2px 10px 5px #e50c0c;
+  position: absolute;
+  top: -97.1%;
+  left: -5.5%;
+  z-index: 0;
+}
+
+.descV {
+  position: relative;
+  top: -30rem;
+  left: 15rem;
+}
+
+figura.item.m1 {
+  position: relative;
+  top: 7rem;
+  left: 13rem;
+}
+figura.item.m2 {
+  position: relative;
+  top: -18.3rem;
+}
+
+figura.item.m3 {
+  position: relative;
+  top: -43.3rem;
+  /* left: 13rem; */
+}
+
+figura.item.m4 {
+  position: relative;
+  top: -69rem;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}

@@ -1,0 +1,77 @@
+form {
+  position: relative;
+  top: 28rem;
+  left: 38rem;
+}
+
+.inner.innenP.color-white {
+  position: relative;
+  top: 16rem;
+}
+
+.inner.innerP3.color-white {
+  position: relative;
+  top: 4rem;
+  left: -28rem;
+}
+
+.tarea {
+  position: relative;
+  left: 0rem;
+  top: 6rem;
+  width: 19rem;
+  height: 10rem;
+}
+
+input#whattsapp {
+  position: relative;
+  left: -1rem;
+  top: 3rem;
+}
+
+label.what {
+  position: relative;
+  left: -1rem;
+}
+
+label.flip-box-header.nom {
+  position: relative;
+  top: 3rem;
+}
+
+input#name {
+  position: relative;
+  top: 3rem;
+}
+
+label.emai {
+  position: relative;
+  top: 3rem;
+}
+
+label.what {
+  position: relative;
+  left: -1rem;
+  top: 3rem;
+}
+
+.flip-box-button {
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 2px;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  position: relative;
+  top: 86px;
+  padding: 11px 20px;
+  text-transform: uppercase;
+  box-shadow: 0.0625rem 0.125rem 0.624rem 0.3125rem #e50c0c;
+}
+
+input#email {
+  position: relative;
+  top: 3rem;
+}

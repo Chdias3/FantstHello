@@ -1,0 +1,212 @@
+@{
+  ViewData["Title"] = "Historias";
+}
+
+@using Microsoft.AspNetCore.Http;
+
+<link rel="stylesheet" href="/assets/fonts/style.css">
+<link rel="stylesheet" href="/CSS/home.CSS">
+<link rel="stylesheet" href="/CSS/accessories.CSS">
+<link rel="stylesheet" href="/CSS/stories.CSS">
+
+
+@* logo ------------- *@
+<nav class="logo-cart">
+  @* logo ------------- *@
+  <div>
+    <a href="/Home/home">
+      <img class="logo" src="/CSS/img/logo.jpeg" />
+    </a>
+  </div>
+
+  @* carrinho ------- *@
+  <div>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-dark " href="~/itemOrder/List">
+          <img class="icon-cart" src="~/CSS/img/cart.png" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+@* menu ---------- *@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+        <ul class="navbar-nav flex-grow-1">
+
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="home/#about"><strong> Sobre
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="stories"><strong> Historias
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/itemOrder/Insert/#books3"><strong> Livros
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="itemOrder" asp-action="Insert"><strong> Acessorios
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="articles"><strong> Artigos
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="gallery"><strong> Galeria de foto
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="galleryVideo"><strong> Galeria de video
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="home/#contactNow"><strong>Contato</strong></a>
+          </li>
+
+          @if (Context.Session.GetInt32("IdUsuario") == null)
+          {
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Insert"><strong>
+                  Cadastrar usuario</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Login"><strong>
+                  Login</strong></a>
+            </li>
+          }
+          else
+          {
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="List"><strong> Usuarios
+                  cadastrados</strong></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Logout"><strong>
+                  Logout</strong></a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<img class="wolf" src="~/CSS/img/wolf.png" />
+<img class="imgWitch" src="~/CSS/img/witch.jpeg" />
+<img class="imgWitch2" src="~/CSS/img/witch2.jpg" />
+
+<p class="text1" align="justify"> Segundo relatos de lendas antigas, esse dia passou a ser conhecido como “dia das
+  bruxas” devido a
+  ser o dia em que as bruxas se reuniam para fazer feitiços e amaldiçoar as pessoas.
+  <br>
+  <br>
+  Há versões que relatam que as bruxas podem se transformar em gatos. A partir daí, surge a história de que os gatos
+  pretos são ammaldiçoados ou dão azar. Em muitos locais do mundo, é comum gatos pretos serem mortos no Halloween ou
+  usados em rituais de sacrifícios e magia negra.
+  <br>
+  <br>
+  Há quem diga que para encontrar uma bruxa no Halloween, basta vestir as roupas do avesso e andar de costas à noite.Se
+  você fizer isso, à meia noite exatamente, uma bruxa aparecerá para você.
+</p>
+
+<hr class="skullcenter dv1">
+<img class="skull1" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+<img class="imgCauldron" src="~/CSS/img/cauldron.jpeg" />
+<img class="imgCauldron2" src="~/CSS/img/cauldron2.jpg" />
+
+<p class="text2" align="justify"> Essa peça comum de ornamentação no Halloween está ligada aos feitiços das bruxas.
+
+  <br>
+  <br>
+  Na cultura celta, jogam-se moedas dentro do caldeirão acompanhado de bilhetes com pedidos aos espíritos, que
+  posteriormente são queimados.A fumaça é responsável por levar a mensagem aos espíritos.
+</p>
+
+<hr class="skullcenter dv2">
+<img class="skull2" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+<img class="imgJack" src="~/CSS/img/jack.jpeg" />
+<img class="imgJack2" src="~/CSS/img/jack2.jpg" />
+
+<p class="text3" align="justify"> Jack é um alcoólatra, que bebeu muito especialmente durante a noite do dia das bruxas.
+  Nessa noite,
+  o diabo veio levar sua alma. Os dois fazem um trato. Jack pediu que o diabo virasse uma moeda para que ele pudesse
+  tomar sua última bebida. O diabo concorda. Jack coloca o diabo em forma de moeda em sua carteira, que por sua vez,
+  possui, um símbolo de cruz, o que prende o diabo ali. O diabo só é libertado ao fazer um acordo com Jack, no qual, ele
+  poderia viver mais um ano.
+  <br>
+  <br>
+  No ano seguinte, Jack consegue enganar o diabo novamente. Mas morre espontaneamente logo depois. Por ser um
+  alcoólatra, ele não foi aceito no céu. Então indo para o inferno, ele dá de cara com o diabo que havia enganado.O
+  diabo enfurecido, também não o quis no inferno e o mandou para a noite escura com apenas uma brasa de carvão para
+  iluminar o caminho.
+  <br>
+  <br>
+  Para guiar seus caminhos, Jack teria colocado o carvão em um nabo esculpido, fazendo assim uma lanterna. Assim, Jack
+  estaria vagando na Terra, sem lugar no céu e nem no inferno.
+  <br>
+  <br>
+  Elementos de decoração como rostos assustadores em nabos, batatas e abóboras, são colocados em esculturas em janelas
+  para afugentar os espíritos miseráveis e malignos,
+  como Jack.
+  <br>
+  <br>
+  A partir daí, surge o uso popular das abóboras no Halloween.
+</p>
+
+<hr class="skullcenter dv3">
+<img class="skull3" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+<img class="imgZombie" src="~/CSS/img/zombie1.jpeg" />
+<img class="imgZumbie2" src="~/CSS/img/zombies.jpg" />
+
+<p class="text4" align="justify"> Há uma lenda que diz que no dia das bruxas, os mortos aproveitam para andar livremente
+  pelo mundo
+  dos vivos, e são passados despercebidos, junto as pessoas fantasiadas.
+  Com sua visita na terra, os mortos aproveitam para ver como estão seus entes queridos ou podem se vingar de seus
+  inimigos.
+</p>
+
+<hr class="skullcenter dv4">
+<img class="skull4" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+<img class="imgGost" src="~/CSS/img/backgroundInput.jpg" alt="">
+
+<!--footer-->
+<footer class="section">
+  <div class="cont grid">
+    <div class="brand">
+      <a class="nav-link logo logo-alt" href="#">Fantasthello.com</a>
+      <p class="subtitle">©2022 Fantasthello.</p>
+      <p class="subtitle">Todos os direitos reservados.</p>
+    </div>
+
+    <div class="social grid">
+      <a class="nav-link" href="https://instagram.com" target="_blank">
+        <i class="icon-instagram"></i>
+      </a>
+      <a class="nav-link" href="https://facebook.com" target="_blank">
+        <i class="icon-facebook"></i></a>
+      <a class="nav-link" href="https://youtube.com" target="_blank"><i class="icon-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<img class="backgroundFinal" src="~/CSS/img/backgroundFinal.jpeg" />

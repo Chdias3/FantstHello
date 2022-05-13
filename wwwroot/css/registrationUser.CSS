@@ -1,0 +1,66 @@
+img.imgGhost {
+  position: relative;
+  left: 28rem;
+  top: 0rem;
+  height: 16rem;
+}
+
+footer.section {
+  position: relative;
+  top: -10.375rem;
+}
+
+label {
+  position: relative;
+  top: 7rem;
+  left: 15rem;
+}
+
+#login-container {
+  background-color: #0c0b0c;
+  width: 445px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  margin-top: 10vh;
+  border-radius: 10px;
+  text-align: center;
+}
+
+input {
+  border-bottom: 2px solid #5c5656;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  position: relative;
+  width: 21rem;
+  left: 18rem;
+  top: 4rem;
+  background-color: #0c0c0c;
+}
+
+input#dat {
+  position: relative;
+  top: -4rem;
+}
+
+p.nasc {
+  position: relative;
+  top: 1.4rem;
+  left: 11.7rem;
+}
+
+.backgroundFinal {
+  position: relative;
+  top: 0rem;
+  width: 274.84%;
+  padding-left: -20%;
+  /* left: -50%; */
+  margin-inline: -21%;
+  height: 0%;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}

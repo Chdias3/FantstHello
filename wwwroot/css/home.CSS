@@ -1,0 +1,661 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*modifica a maneira de ver o tamanho de uma caixa para escolher como as caixas podem ser modificadas no css... conta a partir da borda e todos elementos border e padding tem que caber no tamanho da caixa 100%...então ele soma as propriedades mas mantem no limite ou seja a caixa nao extrapola*/
+}
+
+ul {
+  list-style: none; /*retira a lista ou pontos*/
+}
+
+a {
+  text-decoration: none; /*tira todas as linhas de links da pagina*/
+}
+
+html {
+  scroll-behavior: smooth; /*é rolagem suave.. quando clica no conteudo do menu ele rola a pagina de modo suave*/
+}
+
+body {
+  background-color: #000;
+  margin-bottom: 6.25rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.8125rem;
+  margin: 0;
+  padding: 0;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #000000 !important;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 6.8125rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  position: relative;
+  top: -3.75rem;
+}
+
+/* logo,img e carrinho ------------------------------ */
+.logo-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  margin-left: -11.825rem;
+  height: 5rem;
+  display: flex;
+  z-index: 100;
+  margin-top: -0.375rem;
+  position: relative;
+  top: 1rem;
+}
+
+.icon-cart {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1.185rem;
+  position: relative;
+  top: 0.5rem;
+}
+/* ------------------------------------- */
+
+/* menu------------------------------ */
+
+.navbar {
+  width: 88.375rem;
+  padding-right: 28.75rem;
+  margin-top: 2rem;
+  margin-left: -13.875rem;
+}
+
+.bg-white {
+  background-color: #0e0b0b !important;
+}
+
+/* imagem dinamica ------------------------ */
+/* ajustes da imagem e sombra em volta -------- */
+.maindiv {
+  width: 70%;
+  height: 14%;
+  position: absolute;
+  left: 50%;
+  top: 14%;
+  transform: translate(-50%, -50%);
+  background-image: url(img/skullV.jpeg);
+  background-size: 100% 100%;
+  box-shadow: 0.0625rem 0.125rem 0.625rem 0.3125rem #e50c0c;
+  animation: slider 9s infinite linear;
+  table-layout: fixed;
+}
+
+@keyframes slider {
+  0% {
+    background-image: url(img/skullV.jpeg);
+  }
+
+  35% {
+    background-image: url(img/terrorPlace.jpeg);
+  }
+
+  75% {
+    background-image: url(img/offer.jpeg);
+  }
+}
+
+/* ----------------------------- */
+/* imagens ------------------------- */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.25rem;
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 0.625rem;
+}
+
+.u {
+  margin-top: 6%;
+  position: relative;
+  top: 25.4rem;
+  left: -3.875rem;
+  width: 27.7rem;
+}
+
+section.grid3::before {
+  content: '';
+  height: 37.6%;
+  width: 70.8%;
+  background: #0c0b0c;
+  position: absolute;
+  top: 21.99%;
+  left: 14.7%;
+  z-index: 0;
+}
+
+.imgHerry {
+  max-width: 100%;
+  display: block;
+}
+
+img.imgHerry.Book {
+  position: relative;
+  right: -31rem;
+  top: -22.5rem;
+}
+
+p.textHerry {
+  position: relative;
+  top: 1rem;
+}
+
+p.textShop {
+  position: relative;
+  top: 1rem;
+}
+
+p.textBook {
+  position: relative;
+  left: 31rem;
+  top: -21.5rem;
+}
+
+.dolls {
+  width: 70%;
+  height: 13.4%;
+  position: absolute;
+  left: 50%;
+  top: 52.6%;
+  transform: translate(-50%, -50%);
+  background-image: url(img/dolls.jpg);
+  background-size: 100% 100%;
+  table-layout: fixed;
+}
+
+/* sobre imagem ------------------------ */
+.about {
+  position: relative;
+  top: -7.79rem;
+  left: 26.125rem;
+  height: 5rem;
+}
+
+.contact {
+  position: relative;
+  top: 40.25rem;
+  left: 26.125rem;
+  height: 5rem;
+}
+
+.textAbout::before {
+  content: '';
+  height: 92.4%;
+  width: 103.8%;
+  background: #000000;
+  position: absolute;
+  box-shadow: 0.0625rem 0.125rem 0.625rem 0.3125rem #e50c0c;
+  top: -7.1%;
+  left: -1.7%;
+  z-index: 0;
+}
+
+.textAbout {
+  position: relative;
+  top: 38rem;
+  margin-right: 6rem;
+}
+
+p.textAbout {
+  position: relative;
+  top: 40.625rem;
+}
+
+img.backgroundGhost {
+  position: relative;
+  top: 52rem;
+  left: 18rem;
+  height: 13rem;
+}
+
+.backgroundFinal {
+  position: relative;
+  top: 47.5rem;
+  width: 138.34%;
+  padding-left: -20%;
+  /* left: -50%; */
+  margin-inline: -21%;
+  height: 0%;
+}
+
+/* ---------------------------------- */
+.nav-item a {
+  transition: 0.3s; /*suavizar*/
+  display: inline-block;
+}
+
+.nav-item a:hover {
+  transform: translateY(-0.5rem);
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.navbar-nav .nav-link {
+  padding-left: 1.375rem;
+}
+/* ------------------------------ */
+
+html {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+.border-top {
+  border-top: 0.0625rem solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  position: relative;
+  top: -5rem;
+}
+
+b,
+strong {
+  font-weight: bolder;
+  color: #cfcac4;
+}
+
+section#contact::before {
+  content: '';
+  height: 118.4%;
+  width: 93.99%;
+  background: #0c0b0c;
+  box-shadow: 0.0625rem 0.125rem 0.625rem 0.3125rem #e50c0c;
+  position: absolute;
+  top: -46.1%;
+  left: -1.5%;
+  z-index: 0;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 3.75rem; /* Vertically center the text there */
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  height: 5.5rem;
+}
+
+section#contact {
+  position: relative;
+  top: 49.9rem;
+}
+
+/* --------------------------------- */
+
+/* aqui pega somente o filho do primeiro item */
+.grid3-item:nth-child(1) {
+  grid-row: 1 / 3; /* aqui é o que ele vai ocupar da linha 1 ate a 3*/
+}
+
+.grid3-item {
+  display: grid;
+}
+
+.h2,
+h2 {
+  font-size: 2rem;
+  position: relative;
+  top: -7rem;
+}
+
+.grid3-item img {
+  grid-column: 1;
+  grid-row: 1/3; /*aqui minha img vai da 1 a 3 assim vai pegar a legenda*/
+  align-self: end; /*para quando for diminuir a tela a legenda ficar alinhada e nao aumentar o seu tamanho*/
+  height: auto;
+}
+
+.grid3-item p {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.625rem;
+  color: white;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  /* position: relative; */
+  /* top: 29%; */
+}
+
+/*====  CONTACT ============================ */
+section.section {
+  position: relative;
+  top: 24rem;
+}
+
+i.icon-whatsapp {
+  position: relative;
+  font-size: 1.5rem;
+  margin-right: 0.2rem;
+}
+
+.services1 {
+  display: grid;
+  justify-content: end;
+}
+
+p.FormOptional {
+  position: relative;
+  top: -8rem;
+}
+
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+a.nav-link.text-dark.FormOptional2 {
+  background-color: #0c0a0c;
+  box-shadow: 0.0625rem 0.125rem 0.625rem 0.3125rem #e50c0c;
+  color: #fff;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  transition: background 0.3s;
+  position: relative;
+  left: -15.5rem;
+  top: 2rem;
+}
+
+a.nav-link.text-dark.FormOptional2:hover {
+  background-color: red;
+}
+
+strong:hover {
+  color: red;
+}
+
+.FormOptional2 strong:hover {
+  color: #cfcac4;
+}
+
+a.nav-link.text-dark.FormOptional3 {
+  /* 10px 1px #e50c0c: ; */
+  color: #fff;
+  background-color: #0c0a0c;
+  box-shadow: 0.0625rem 0.125rem 0.625rem 0.3125rem #e50c0c;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  transition: background 0.3s;
+  position: relative;
+  left: -14.5rem;
+  top: 2rem;
+}
+
+.FormOptional3 strong:hover {
+  color: #cfcac4;
+}
+
+a.nav-link.text-dark.FormOptional3:hover {
+  background-color: red;
+}
+
+/*button i é o what e os outros icones*/
+#contact .button i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+.button {
+  background-color: #16d394;
+  color: #fff;
+  height: 3.5rem;
+  display: inline-flex; /*deixa na mesma linha do tamanho do conteudo.. o flex permite abilitar mexer nos elementos */
+  align-items: center;
+  padding: 0 2rem; /*0 em cima e 2 nas laterais*/
+  border-radius: 0.25rem; /*arredondamento na borda*/
+  transition: background 0.3s; /*suavidade em relação a mudança de cor*/
+  position: relative;
+  top: -4rem;
+}
+
+/*hover é quando passar o mause em cima muda de cor*/
+.button:hover {
+  background: #04e69a;
+  color: #fff;
+}
+
+/*espaço entre os icones*/
+#contact ul.grid {
+  gap: 2rem;
+}
+
+ul.grid.services1 {
+  position: relative;
+  left: -6rem;
+  height: 6rem;
+  margin-left: 40rem;
+  top: -5rem;
+}
+
+/*alinhamento dos icones*/
+#contact ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* right: 0rem; */
+  margin-top: -1rem;
+  left: -7rem;
+}
+
+.icon-phone:before {
+  content: '\e900';
+  color: red;
+  position: relative;
+  font-size: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+.icon-map-pin:before {
+  content: '\e906';
+  color: red;
+  position: relative;
+  font-size: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+.icon-mail:before {
+  content: '\e905';
+  color: red;
+  position: relative;
+  font-size: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+/*cor dos icones*/
+#contact ul li i {
+  color: var(--title-color);
+}
+
+/*====  FOOTER ============================ */
+
+footer.section {
+  position: relative;
+  top: 49.625rem;
+}
+
+footer.section {
+  padding: 0rem 0;
+}
+
+.brand {
+  position: relative;
+  top: -9rem;
+}
+
+.logo-alt {
+  margin: 0rem;
+  position: relative;
+  top: -4rem;
+  color: aliceblue;
+  left: -1.9rem;
+}
+
+footer.section {
+  padding: 4rem 0; /*é 4 de em cima e em baixo e 0 nas laterais*/
+}
+
+footer.section {
+  position: relative;
+  top: 56.625rem;
+}
+
+footer .logo {
+  display: inline-block; /*só inline - eu não tenho opção de colocar margin bottom mas com block sim...o logo é um elemento a entao é inline entao coloco block*/
+  margin-bottom: 1.5rem;
+  /* color: var(--title-color); */
+}
+
+footer .brand p {
+  /* color: var(--text-color-light); */
+  margin-bottom: 0.75rem;
+  position: relative;
+  left: -1rem;
+}
+
+/*é o icone*/
+footer i {
+  font-size: 1.5rem;
+  /* color: var(--text-color-light); */
+}
+
+/* para que os icones fiquem em linha */
+footer .social {
+  grid-auto-flow: column; /*fluir automaticamente como coluna*/
+  width: fit-content; /*ai a caixa fica do mesmo tamanho do icone ..fica um do lado do outro com espaço correto*/
+}
+
+/*mexer no icone quando passar o mause */
+footer .social a {
+  /*outra possibilidade era display flex e gap de 2rem ... joga um do lado do outro*/
+  /* margin-right: 2rem; */ /*foi retirado no ajuste e colocado grid em footer na div social no html e os icones ficaram um embaixo do outro*/
+  transition: 0.3s; /*suavizar*/
+  display: inline-block; /* o link a é sempre display inline e não recebe o translate... então coloco inline block porque adiciona propriedade assim mexe quando coloco o mause em cima*/
+}
+
+footer .social a:hover {
+  /*para quando passar o mause em cima*/
+  transform: translateY(-0.5rem);
+}
+
+a:hover {
+  color: #f8f9fb;
+  text-decoration: underline;
+}
+
+.social.grid {
+  display: flex;
+  right: -44.7rem;
+  top: -18rem;
+}
+
+footer .social {
+  grid-auto-flow: column;
+  width: fit-content;
+  position: relative;
+  top: -18rem;
+}
+
+.icon-instagram:before {
+  content: '\e904';
+  color: red;
+  position: relative;
+  left: 0rem;
+}
+
+.icon-facebook:before {
+  content: '\e903';
+  color: red;
+  position: relative;
+  left: -2rem;
+}
+
+.icon-youtube:before {
+  content: '\e90b';
+  color: red;
+  position: relative;
+  left: -4rem;
+}
+
+a.nav-link.logo.logo-alt:hover {
+  color: red;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}

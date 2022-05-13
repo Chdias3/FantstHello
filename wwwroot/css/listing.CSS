@@ -1,0 +1,29 @@
+th {
+  text-align: inherit;
+  background-color: #870f6c;
+  color: white;
+}
+
+table {
+  position: relative;
+  width: 51rem;
+  left: 10rem;
+  top: 1rem;
+}
+
+img.imgGhost {
+  position: relative;
+  left: 28rem;
+  top: 11rem;
+  height: 16rem;
+}
+
+tr {
+  position: relative;
+  height: 2rem;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}

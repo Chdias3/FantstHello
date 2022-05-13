@@ -1,0 +1,22 @@
+th {
+  text-align: inherit;
+  background-color: #111112;
+  color: white;
+}
+
+.table-dark {
+  color: #fff;
+  background-color: #111112;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  /* border-bottom: 2px solid #dee2e6; */
+}
+
+h2 {
+  font-size: 2rem;
+  position: relative;
+  top: 0rem;
+  left: 10rem;
+}

@@ -1,0 +1,207 @@
+th {
+  text-align: inherit;
+  background-color: #870f6c;
+  color: white;
+}
+
+table {
+  position: relative;
+  width: 51rem;
+  left: 10rem;
+  top: 1rem;
+}
+
+tr {
+  position: relative;
+  height: 2rem;
+}
+
+.navbar {
+  width: 91.375rem;
+  padding-right: 32.75rem;
+  margin-top: 3rem;
+  margin-left: -222px;
+}
+
+.navbar {
+  width: 93.375rem;
+  padding-right: 32.75rem;
+  margin-top: 3rem;
+  margin-left: -13.875rem;
+}
+
+a.regNew {
+  background-color: #5d1162;
+  color: #fff;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 1em;
+  border-radius: 0.25rem;
+  transition: background 0.3s;
+  position: relative;
+  top: -1rem;
+  left: 14rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  position: relative;
+  top: 0.25rem;
+  left: 30rem;
+}
+
+a.regNew:hover {
+  background-color: #410d35;
+}
+
+img.imgGhost {
+  position: relative;
+  left: 25rem;
+  top: 3rem;
+  height: 16rem;
+}
+
+.backgroundFinal {
+  position: relative;
+  top: 0rem;
+  width: 276.8%;
+  padding-left: -20%;
+  /* left: -50%; */
+  margin-inline: -23%;
+  height: 0%;
+}
+
+footer.section {
+  position: relative;
+  top: -12.375rem;
+}
+
+.social.grid {
+  display: flex;
+  right: -50.7rem;
+  top: 6rem;
+}
+
+a.nav-link.logo.logo-alt {
+  margin: 0rem;
+  position: relative;
+  top: -4rem;
+  color: aliceblue;
+  left: -4.9rem;
+}
+
+.logo {
+  margin-left: -11.825rem;
+  /* margin-top: 27px; */
+  height: 5rem;
+  display: flex;
+  /* position: fixed; */
+  z-index: 100;
+  margin-top: -1.375rem;
+  position: relative;
+  top: 2rem;
+  left: 6.5rem;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #000;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  left: 13rem;
+}
+
+img.img-fluid.rounded-start {
+  position: relative;
+  width: 12rem;
+}
+
+img.img-fluid.rounded-start {
+  position: relative;
+  width: 12rem;
+  left: 1rem;
+  top: 1rem;
+}
+
+.article-ne {
+  height: 315px;
+  /* -webkit-box-shadow: 0; */
+  margin: 0 auto;
+  border: 0;
+  background: url(img/fundOrder.webp) no-repeat transparent;
+  padding: 0px;
+  background-size: 88.4% 99%;
+  position: relative;
+  width: 16rem;
+  left: 0.94rem;
+  margin-right: 0rem;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  position: relative;
+  top: 6rem;
+  left: 5rem;
+}
+
+p {
+  margin-top: -11px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+  position: relative;
+  top: -6rem;
+}
+
+element.style {
+  max-width: 540px;
+  position: relative;
+  left: 9rem;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  color: #ef00ff;
+  left: 1rem;
+}
+
+.btn-outline-danger {
+  color: #9c3ea3;
+  border-color: #9c3ea3;
+}
+
+a.btn.btn-outline-danger:hover {
+  background-color: #9c3ea3;
+  border-color: #9c3ea3;
+}
+
+footer .brand p {
+  /* color: var(--text-color-light); */
+  margin-bottom: 0.75rem;
+  position: relative;
+  left: -4rem;
+  font-size: 0.9rem;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}

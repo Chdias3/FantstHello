@@ -1,0 +1,176 @@
+@{
+  ViewData["Title"] = "Videos";
+}
+
+@using Microsoft.AspNetCore.Http;
+
+<link rel="stylesheet" href="/assets/fonts/style.css">
+<link rel="stylesheet" href="/CSS/home.CSS">
+<link rel="stylesheet" href="/CSS/accessories.CSS">
+<link rel="stylesheet" href="/CSS/stories.CSS">
+<link rel="stylesheet" href="/CSS/galleryVideo1.CSS">
+<link rel="stylesheet" href="/CSS/galleryVideo2.CSS">
+
+
+@* logo ------------- *@
+<nav class="logo-cart">
+  @* logo ------------- *@
+  <div>
+    <a href="/Home/home">
+      <img class="logo" src="/CSS/img/logo.jpeg" />
+    </a>
+  </div>
+
+  @* carrinho ------- *@
+  <div>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-dark " href="~/itemOrder/List">
+          <img class="icon-cart" src="~/CSS/img/cart.png" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+@* menu ---------- *@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+        <ul class="navbar-nav flex-grow-1">
+
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="home/#about"><strong> Sobre
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="stories"><strong> Historias
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/itemOrder/Insert/#books3"><strong> Livros
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="itemOrder" asp-action="Insert"><strong> Acessorios
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="articles"><strong> Artigos
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="gallery"><strong> Galeria de foto
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" asp-controller="Home" asp-action="galleryVideo"><strong> Galeria de video
+              </strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="home/#contactNow"><strong>Contato</strong></a>
+          </li>
+
+          @if (Context.Session.GetInt32("IdUsuario") == null)
+          {
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Insert"><strong>
+                  Cadastrar usuario</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Login"><strong>
+                  Login</strong></a>
+            </li>
+          }
+          else
+          {
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="List"><strong> Usuarios
+                  cadastrados</strong></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Logout"><strong>
+                  Logout</strong></a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="gallery items-4">
+  <div id="item-1" class="control-operator"> </div>
+  <div id="item-2" class="control-operator"> </div>
+  <div id="item-3" class="control-operator"> </div>
+  <div id="item-4" class="control-operator"> </div>
+
+  <figura class="item m1">
+    <iframe width="700" height="400" src="https://www.youtube.com/embed/P95N5j2i2yw" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </figura>
+
+  <figura class="item m2">
+    <iframe width="700" height="400" src="https://www.youtube.com/embed/nilTpWBR4d8" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </figura>
+
+  <figura class="item m3">
+    <iframe width="700" height="400" src="https://www.youtube.com/embed/YlPigUJw1Xc" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </figura>
+
+  <figura class="item m4">
+    <iframe width="700" height="400" src="https://www.youtube.com/embed/XLl_TRzAPus" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </figura>
+
+  <div class="controls">
+    <a href="#item-1" class="controle-button"> • </a>
+    <a href="#item-2" class="controle-button"> • </a>
+    <a href="#item-3" class="controle-button"> • </a>
+    <a href="#item-4" class="controle-button"> • </a>
+  </div>
+</div>
+
+<div class="descV">
+  <p>- HELLOWEEN - Fear Of The Fallen (Official Lyric Video)</p>
+  <p>- A origem do Halloween | Nerdologia</p>
+  <p>- FANTASMAS COM GARRAFA PET
+  </p>
+  <p>- Como fazer PELE PODRE DE ZUMBI - Maquiagem de Halloween</p>
+</div>
+
+<img class="imgGost" src="~/CSS/img/backgroundInput.jpg" alt="">
+
+<!--footer-->
+<footer class="section">
+  <div class="cont grid">
+    <div class="brand">
+      <a class="nav-link logo logo-alt" href="#">Fantasthello.com</a>
+      <p class="subtitle">©2022 Fantasthello.</p>
+      <p class="subtitle">Todos os direitos reservados.</p>
+    </div>
+
+    <div class="social grid">
+      <a class="nav-link" href="https://instagram.com" target="_blank">
+        <i class="icon-instagram"></i>
+      </a>
+      <a class="nav-link" href="https://facebook.com" target="_blank">
+        <i class="icon-facebook"></i></a>
+      <a class="nav-link" href="https://youtube.com" target="_blank"><i class="icon-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<img class="backgroundFinal" src="~/CSS/img/backgroundFinal.jpeg" />

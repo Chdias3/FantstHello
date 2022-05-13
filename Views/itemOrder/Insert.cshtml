@@ -1,0 +1,2035 @@
+@{
+    ViewData["Title"] = "Acessorios";
+}
+
+@using fantastHello.Models
+@using Microsoft.AspNetCore.Http;
+@model itemOrder
+
+<link rel="stylesheet" href="/assets/fonts/style.css">
+<link rel="stylesheet" href="/CSS/home.CSS">
+<link rel="stylesheet" href="/CSS/accessories.CSS">
+
+@* logo ------------- *@
+<nav class="logo-cart">
+    @* logo ------------- *@
+    <div>
+        <a href="/Home/home">
+            <img class="logo" src="~/CSS/img/logo.jpeg" />
+        </a>
+    </div>
+
+    @* carrinho ------- *@
+    <div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-dark " href="~/itemOrder/List">
+                    <img class="icon-cart" src="~/CSS/img/cart.png" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+@* menu ---------- *@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/Home/home/#about"><strong> Sobre
+                            </strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="stories"><strong> Historias
+                            </strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#books3"><strong> Livros
+                            </strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="itemOrder" asp-action="Insert"><strong> Acessorios
+                            </strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="articles"><strong> Artigos
+                            </strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="gallery"><strong> Galeria de
+                                foto
+                            </strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="galleryVideo"><strong> Galeria
+                                de video</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/Home/home/#contactNow"><strong>Contato</strong></a>
+                    </li>
+
+                    @if (Context.Session.GetInt32("IdUsuario") == null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserClient"
+                            asp-action="Insert"><strong>
+                                    Cadastrar usuario</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserClient"
+                            asp-action="Login"><strong>
+                                    Login</strong></a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="List"><strong>
+                                    Usuarios
+                                    cadastrados</strong></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UserClient"
+                            asp-action="Logout"><strong>
+                                    Logout</strong></a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<img class="imgTerror" src="~/CSS/img/terrorPlace.jpeg" alt="">
+<div class="textsob">
+    <h2 style="text-align: left;">Fantasthello promove noite do terror</h2>
+    <p id="paragraph" align="justify"> Venha se divertir e aproveitar a Black oferta. Acessórios e muitos outros
+        produtos
+        Fantasthello a sua disposição. Além disso, promoveremos uma serie de eventos fantásticos, venha participar.
+        Basta entrar em contato conosco que realizaremos os encaminhamentos necessários.
+    </p>
+</div>
+
+<hr class="skullcenter li">
+<img class="skullLin" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+@* vitrine --------------------------- *@
+<ul class="product-list">
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it1">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/mug.jpg" alt="description image">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Caneca halloween" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="100,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$200,00</del>
+                                    <ins class="d-block">R$100,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 25,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/mug.jpg" required></p>
+
+                            <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+
+
+
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it2">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/a1.jpg" alt="Capa Fantasma">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Capa Fantasma" required></p>
+
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$300,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/a1.jpg" required></p>
+
+ <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it3">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/a2.jpg" alt="Capa dracula">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Capa drácula" required></p>
+
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="450,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$500,00</del>
+                                    <ins class="d-block">R$450,00</ins>
+                                </div>
+                                <span class="price-info">9x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/a2.jpg" required></p>
+
+ <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it4">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/a3.jpg" alt="Colar caveira">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Colar caveira" required></p>
+
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="100,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$150,00</del>
+                                    <ins class="d-block">R$100,00</ins>
+                                </div>
+                                <span class="price-info">2x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/a3.jpg" required></p>
+
+ <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it5">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/a4.jpg" alt="Fantasia mago">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Fantasia mago" required></p>
+
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$350,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/a4.jpg" required></p>
+
+ <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it6">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/a5.jpg" alt="Chapéu caveira">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Chapéu caveira" required></p>
+
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="15,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$25,00</del>
+                                    <ins class="d-block">R$15,00</ins>
+                                </div>
+                                <span class="price-info">3x de R$ 5,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/a5.jpg" required></p>
+
+ <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it7">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/a6.jpg" alt="Faca halloween">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Faca halloween" required></p>
+
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="30,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$50,00</del>
+                                    <ins class="d-block">R$30,00</ins>
+                                </div>
+                                <span class="price-info">3x de R$ 10,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/a6.jpg" required></p>
+
+ <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it8">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/a7.jpg" alt="Bolsa halloween">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Bolsa halloween" required></p>
+
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="350,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$400,00</del>
+                                    <ins class="d-block">R$350,00</ins>
+                                </div>
+                                <span class="price-info">7x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/a7.jpg" required></p>
+
+ <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+</ul>
+
+<hr class="skullcenter lan">
+<img class="skullLi" id="dollsHarry2" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+<ul class="product-list">
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it9">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/hrry1.jpg" alt="Harry Potter pano">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Harry Potter pano" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$300,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/hrry1.jpg" required></p>
+
+ <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it10">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/hrry2.jpg" alt="Harry Potter porcelana">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Harry Potter porcelana" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="350,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$400,00</del>
+                                    <ins class="d-block">R$350,00</ins>
+                                </div>
+                                <span class="price-info">7x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/hrry2.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it11">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/hrry3.jpg" alt="Coleção Fantastica">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Coleção Fantastica" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="800,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$1000,00</del>
+                                    <ins class="d-block">R$800,00</ins>
+                                </div>
+                                <span class="price-info">16x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/hrry3.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it12">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/hrry4.jpg" alt="Coleção Potter">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Coleção Potter" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="800,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$1000,00</del>
+                                    <ins class="d-block">R$800,00</ins>
+                                </div>
+                                <span class="price-info">16x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/hrry4.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it13">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/hrry9.jpg" alt="Harry Potter madeira">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Harry Potter madeira" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$250,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/hrry9.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it14">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/hrry6.jpg" alt="Harry Potter">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Harry Potter" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="300,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$400,00</del>
+                                    <ins class="d-block">R$300,00</ins>
+                                </div>
+                                <span class="price-info">6x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/hrry6.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it15">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/hrry7.jpg" alt="Harry Potter pano">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Harry Potter pano" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$250,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/hrry7.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it16">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/hrry8.jpg" alt="Coleção Harry Potter">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Coleção Harry Potter" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="700,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$800,00</del>
+                                    <ins class="d-block">R$700,00</ins>
+                                </div>
+                                <span class="price-info">14x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/hrry8.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+</ul>
+
+<hr class="skullcenter lin">
+<img class="skulln" id="books3" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+<ul class="product-list">
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it17">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/l1.jpg" alt="Sexta 13">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Sexta 13" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="100,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$200,00</del>
+                                    <ins class="d-block">R$100,00</ins>
+                                </div>
+                                <span class="price-info">2x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/l1.jpg" required></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it18">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/l2.jpg" alt="Condenados">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Condenados" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$250,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/l2.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it19">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/l3.jpg" alt="Kingdom of the Wicker">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Kingdom of the Wicker" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="300,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$350,00</del>
+                                    <ins class="d-block">R$300,00</ins>
+                                </div>
+                                <span class="price-info">6x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/l3.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it20">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/l4.jpg" alt="A coisa">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="A coisa" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="350,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$400,00</del>
+                                    <ins class="d-block">R$350,00</ins>
+                                </div>
+                                <span class="price-info">7x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/l4.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it21">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/l5.jpg" alt="Spells e Curses">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Spells e Curses" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$250,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/l5.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it22">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/l6.png" alt="Coleção Halloween">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Coleção Halloween" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="400,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$500,00</del>
+                                    <ins class="d-block">R$400,00</ins>
+                                </div>
+                                <span class="price-info">8x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/l6.png" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it23">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/l7.jpg" alt="O Tesouro do Cemitério">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="O Tesouro do Cemitério" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="30,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$50,00</del>
+                                    <ins class="d-block">R$30,00</ins>
+                                </div>
+                                <span class="price-info">3x de R$ 10,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/l7.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it24">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/l8.jpg" alt="Herdeiros de drácula">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Herdeiros de drácula" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="600,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$700,00</del>
+                                    <ins class="d-block">R$600,00</ins>
+                                </div>
+                                <span class="price-info">12x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/l8.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+</ul>
+
+<hr id="dolls4" class="skullcenter lh">
+<img class="skullLa" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+<ul class="product-list">
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it25">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/b1.jpg" alt="Boneco Jack">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Boneco Jack" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="300,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$350,00</del>
+                                    <ins class="d-block">R$300,00</ins>
+                                </div>
+                                <span class="price-info">6x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/b1.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it26">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/b2.jpg" alt="Boneco Bruxa">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Boneco Bruxa" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="250,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$300,00</del>
+                                    <ins class="d-block">R$250,00</ins>
+                                </div>
+                                <span class="price-info">5x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/b2.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it27">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/b3.png" alt="Freira do mal">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Freira do mal" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="450,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$500,00</del>
+                                    <ins class="d-block">R$450,00</ins>
+                                </div>
+                                <span class="price-info">9x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/b3.png" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it28">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/b4.png" alt="Vampiro Jack">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Vampiro Jack" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="550,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$600,00</del>
+                                    <ins class="d-block">R$550,00</ins>
+                                </div>
+                                <span class="price-info">11x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/b4.png" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it29">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/b5.jpg" alt="Jack esqueleto">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Jack esqueleto" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="250,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$300,00</del>
+                                    <ins class="d-block">R$250,00</ins>
+                                </div>
+                                <span class="price-info">5x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/b5.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it30">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/b6.jpg" alt="Esqueleto Gerard">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Esqueleto Gerard" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$250,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/b6.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it31">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/b7.jpg" alt="Boneco de pano">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Boneco de pano" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="250,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$300,00</del>
+                                    <ins class="d-block">R$250,00</ins>
+                                </div>
+                                <span class="price-info">5x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/b7.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+
+    <form asp-controller="itemOrder" asp-action="Insert" method="post">
+        <li class="product-item a it32">
+            <article class="article-ne">
+                <a target="_blank" class="product-link">
+                    <figure class="product-info">
+                        <div class="product-info-img box1">
+                            <img class="productA" src="~/CSS/img/b8.jpg" alt="Jack esqueleto">
+                        </div>
+                        <figcaption class="product-info-description">
+
+                            <p class="description i"> <input class="prod prod1" asp-for="description" type="text"
+                                    readonly value="Jack esqueleto" required></p>
+                            <ul class="star-ranking">
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/2kW5mnM/star.png">
+                                </li>
+                                <li><img src="https://i.ibb.co/TwYYb93/star-1.png">
+                                </li>
+                                <li class="qtd-votes">
+                                    </span>(200)</span>
+                                </li>
+                            </ul>
+                        </figcaption>
+                        <div class="price-box box2">
+                            <div class="price">
+                                <div>
+                                    <input readonly value="200,00" class="prod pd1" asp-for="value_unitary" />
+                                    <del>R$300,00</del>
+                                    <ins class="d-block">R$200,00</ins>
+                                </div>
+                                <span class="price-info">4x de R$ 50,00</span>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Carrinho <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <p class="inpq">
+                                <input class="quant" asp-for="quantity" required />
+                            </p>
+                            <p> <input asp-for="productPhoto" type="hidden" readonly
+                                    value="http://localhost:5000/CSS/img/b8.jpg" required></p>
+
+                                     <p> <input asp-for="idUser" value=@Context.Session.GetInt32("IdUsuario") type="hidden"
+                                    readonly></p>
+                        </div>
+                        </div>
+
+                    </figure>
+
+                </a>
+            </article>
+
+        </li>
+    </form>
+</ul>
+
+<hr class="skullcenter ln">
+<img class="skulli" src="~/CSS/img/iconGhost.jpeg" />
+</hr>
+
+<img class="imgGhost" src="~/CSS/img/backgroundInput.jpg" alt="">
+
+<!--footer-->
+<footer class="section">
+    <div class="cont grid">
+        <div class="brand">
+            <a class="nav-link logo logo-alt" href="#">Fantasthello.com</a>
+            <p class="subtitle">©2021 Fantasthello.</p>
+            <p class="subtitle">Todos os direitos reservados.</p>
+        </div>
+        <div class="social grid">
+            <a class="nav-link" href="https://instagram.com" target="_blank">
+                <i class="icon-instagram"></i>
+            </a>
+            <a class="nav-link" href="https://facebook.com" target="_blank">
+                <i class="icon-facebook"></i></a>
+            <a class="nav-link" href="https://youtube.com" target="_blank"><i class="icon-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+
+<img class="backgroundFinal" src="~/CSS/img/backgroundFinal.jpeg" />

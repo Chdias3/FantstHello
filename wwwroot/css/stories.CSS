@@ -1,0 +1,239 @@
+html {
+  scroll-behavior: smooth; /*é rolagem suave.. quando clica no conteudo do menu ele rola a pagina de modo suave*/
+}
+
+img.wolf {
+  position: absolute;
+  z-index: 100;
+  height: 38rem;
+  left: 0rem;
+  top: 2rem;
+}
+
+img.imgWitch {
+  position: relative;
+  top: -3rem;
+  left: 23rem;
+  height: 6rem;
+}
+
+img.imgWitch2 {
+  position: relative;
+  top: 3rem;
+  left: 38rem;
+  height: 17rem;
+}
+
+.text1 {
+  margin-top: -0.6875rem;
+  margin-bottom: 1rem;
+  left: 10rem;
+  top: -6rem;
+}
+
+.navbar {
+  width: 91.375rem;
+  padding-right: 32.75rem;
+  margin-top: 3rem;
+  margin-left: -13.875rem;
+}
+
+.navbar {
+  width: 93.375rem;
+  padding-right: 32.75rem;
+  margin-top: 3rem;
+  margin-left: -13.875rem;
+}
+
+a.nav-link.logo.logo-alt {
+  margin: 0rem;
+  position: relative;
+  top: -4rem;
+  color: aliceblue;
+  left: -4.9rem;
+}
+
+.logo {
+  margin-left: -11.825rem;
+  /* margin-top: 27px; */
+  height: 5rem;
+  display: flex;
+  /* position: fixed; */
+  z-index: 100;
+  margin-top: -1.375rem;
+  position: relative;
+  top: 2rem;
+  left: 6.5rem;
+}
+
+footer .brand p {
+  /* color: var(--text-color-light); */
+  margin-bottom: 0.75rem;
+  position: relative;
+  left: -4rem;
+}
+
+.icon-cart {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1.185rem;
+  /* margin-top: -35rem; */
+  position: relative;
+  top: 0.99rem;
+  left: 32.89rem;
+}
+
+hr.skullcenter.dv1 {
+  position: relative;
+  top: -2rem;
+  left: -6rem;
+}
+
+hr.skullcenter.dv4 {
+  position: relative;
+  top: -6rem;
+  left: -6rem;
+}
+
+img.skull1 {
+  position: relative;
+  top: -11.6rem;
+  left: 34rem;
+}
+
+img.skull2 {
+  position: relative;
+  top: -3.99rem;
+  left: 34rem;
+}
+
+img.skull3 {
+  position: relative;
+  top: -15.6rem;
+  left: 34rem;
+}
+
+img.imgCauldron {
+  position: relative;
+  top: -4rem;
+  left: 23rem;
+  height: 6rem;
+}
+
+img.imgCauldron2 {
+  position: relative;
+  top: 1rem;
+  left: 36.8rem;
+  height: 17rem;
+}
+
+p.text2 {
+  margin-top: -4.5625rem;
+  margin-bottom: 1rem;
+  left: 10rem;
+  position: relative;
+  top: -2rem;
+}
+
+p.text3 {
+  margin-top: -0.6875rem;
+  margin-bottom: 1rem;
+  left: 10rem;
+  top: -8rem;
+}
+
+p.text4 {
+  margin-top: -0.6875rem;
+  margin-bottom: 1rem;
+  left: 10rem;
+  top: -11rem;
+}
+
+hr.skullcenter.dv2 {
+  position: relative;
+  top: 0rem;
+  left: -6rem;
+}
+
+hr.skullcenter.dv3 {
+  position: relative;
+  top: -6rem;
+  left: -6rem;
+}
+
+img.imgJack {
+  position: relative;
+  top: 4rem;
+  left: 23rem;
+  height: 6rem;
+}
+
+img.imgJack2 {
+  position: relative;
+  top: -3rem;
+  left: 36.4rem;
+  height: 14rem;
+}
+
+img.imgZombie {
+  position: relative;
+  top: -7rem;
+  left: 23rem;
+  height: 6rem;
+}
+
+img.imgZumbie2 {
+  position: relative;
+  top: -5rem;
+  left: 36rem;
+  height: 17rem;
+}
+
+img.skull4 {
+  position: relative;
+  top: -14.99rem;
+  left: 34rem;
+}
+
+img.imgGost {
+  position: relative;
+  left: 25rem;
+  top: -2rem;
+  height: 16rem;
+}
+
+a.nav-link.text-dark {
+  position: relative;
+  z-index: 110;
+}
+
+.backgroundFinal {
+  position: relative;
+  top: 0rem;
+  width: 270.46%;
+  padding-left: -20%;
+  /* left: -50%; */
+  margin-inline: -23%;
+  height: 0%;
+}
+
+.backgroundFinal {
+  position: relative;
+  top: 6rem;
+  width: 277.46%;
+  padding-left: -20%;
+  /* left: -50%; */
+  margin-inline: -23%;
+  height: 0%;
+}
+
+.social.grid {
+  display: flex;
+  right: -50.7rem;
+  top: 6rem;
+}
+
+strong {
+  position: relative;
+  z-index: 110;
+}

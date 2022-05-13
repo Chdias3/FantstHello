@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  box-sizing: border-box; /*modifica a maneira de ver o tamanho de uma caixa para escolher como as caixas podem ser modificadas no css... conta a partir da borda e todos elementos border e padding tem que caber no tamanho da caixa 100%...então ele soma as propriedades mas mantem no limite ou seja a caixa nao extrapola*/
+}
+
+/* ---------------------------------- */
+html {
+  scroll-behavior: smooth; /*é rolagem suave.. quando clica no conteudo do menu ele rola a pagina de modo suave*/
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #000000;
+}
+
+/* ---------------------------------- */
+
+.wrapper {
+  max-width: 100rem;
+  text-align: center;
+  margin-left: -7.3125rem;
+  margin-right: -5.625rem;
+}
+
+.parent {
+  width: 100vw;
+  margin: -10px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* img castelo -------- */
+.bg-one {
+  background-image: url(img/Banner.png);
+  background-position-y: bottom;
+  background-size: 55%;
+}
+
+.child {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+
+/* Link Fantasthello ------------ */
+a {
+  display: none;
+  font-size: 35px;
+  color: #ffffff !important;
+  font-family: Snell Roundhand, cursive;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+}
+
+.parent:hover a,
+.parent:focus a {
+  display: block;
+}
+
+/* ---------------------------------- */
+/* é a parte cinza quando passo o mause em cima  */
+.child:before {
+  content: '';
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 73, 94, 0.75);
+}
+
+.parent:hover .child,
+.parent:focus .child {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.parent:hover .child:before,
+.parent:focus .child:before {
+  display: block;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}

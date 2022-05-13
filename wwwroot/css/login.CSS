@@ -1,0 +1,186 @@
+/* geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica; /*muda a font de todos os elementos */
+  color: #323232;
+  border: none; /*para tirar bordas desnecessarias*/
+}
+
+/*mexe na imagem de fundo*/
+/* body { */
+/* background: black; */
+/* background-image: url(background.jpg); */
+/*background-image: url('../img/background.jpg'); */ /*essa forma não deu certo.. os dois pontos é para sair da pasta do css*/
+/* background-repeat: no-repeat; */
+/*para não repertir a imagem na pagina*/
+/* background-size: cover; */
+/* cover significa cobrir ... centraliza a imagem de fundo para fazer o efeito de capa*/
+/* background-position-y: -12.5rem; */ /*para mover a imagem na vertical*/
+/* } */
+
+textarea:focus,
+input:focus {
+  /*input sig. entrada*/
+  outline: none; /*outline - é contorno ou esboço ...none tira todo contorno...nao vai aparecer a borda da caixa da senha ou email (input)*/
+}
+
+a,
+label {
+  font-size: 0.8rem; /*todos os links*/
+}
+
+/*se refere ao login para quando passar o mause em cima e o esqueceu sua senha*/
+a:hover {
+  color: #08558b;
+}
+
+/* container ligin */
+
+#login-container {
+  background-color: #0c0b0c;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  margin-top: 10vh;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* formulario */
+
+form {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+label,
+input {
+  /*para ficar um em baixo do outro ... porque estava um do lado do outro */
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+/* texto em negrito */
+label {
+  font-weight: bold;
+}
+
+input {
+  border-bottom: 2px solid #5c5656;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  position: relative;
+  width: 18rem;
+  left: 18rem;
+  top: 4rem;
+  background-color: #0c0c0c;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  position: relative;
+  top: -5rem;
+  width: 11rem;
+}
+
+p.error {
+  position: relative;
+  top: 0rem;
+  left: -2rem;
+  font-size: 1rem;
+  color: #dc3545 !important;
+  width: 24rem;
+}
+
+input[type='submit'] {
+  position: relative;
+  top: 5rem;
+}
+
+label.log {
+  position: relative;
+  left: 15rem;
+  top: 7rem;
+}
+
+label.senh {
+  position: relative;
+  left: 15rem;
+  top: 7rem;
+}
+
+/* para deixar uma linha azul quando selecionar com o mause em cima ai muda o foco */
+input:focus {
+  border-bottom: 2px solid #08558b;
+}
+
+/*aqui é o link a... esqueceu a senha*/
+#forgot-pass {
+  text-align: right;
+  display: block;
+}
+
+/* como o submit (login) nao tem um id entao foi colocado o type para especificar */
+input[type='submit'] {
+  text-align: center;
+  text-transform: uppercase; /*é para deixar todas as letras maiusculas */
+  font-weight: bold; /*font em negrito*/
+  border: none; /*nao tem borda*/
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  color: #fff;
+  background-color: #1d1f20;
+  cursor: pointer; /*para colocar a maozinha quando passar o mause em cima*/
+}
+
+input[type='submit']:hover {
+  background-color: #18223c;
+  transition: 0.5s;
+}
+
+/* redes sociais */
+
+#social-container,
+#social-container p {
+  margin-bottom: 20px;
+}
+
+#social-container i {
+  padding: 8px 8px; /*é a altura e largura da bolinha*/
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  color: #fff;
+  margin: 0 5px;
+  cursor: pointer; /*para colocar a maozinha quando passar o mause em cima*/
+}
+
+/* registrar */
+
+#registrar-container p {
+  margin-bottom: 10px;
+}
+
+div#login-container {
+  position: relative;
+  left: 22rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  position: relative;
+  top: -0.75rem;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  position: relative;
+  left: -5rem;
+}
