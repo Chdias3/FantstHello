@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+FWuaWessESiBW0U2b79lxHRpvoiqcF2B2BLa33HQgnXESOpUY+ItzUsKz/QN1GMnWEp7GoBqoOVhSQNCU3h7A==",
+  "dgSpecHash": "74oF1xcZt25wW/xBcJY1c5OG8ISAyS3oqFuySYC/VIEH0e20uybBL6kV/lL8xFydk2b0titEq2Ju3amvNmnOmg==",
   "success": true,
-  "projectFilePath": "E:\\Cursos\\SenacEAD\\PI\\Etapa-4\\fantastHello\\fantastHello.csproj",
+  "projectFilePath": "E:\\Cursos\\SenacEAD\\PI-2\\Et-5\\fantastHello\\fantastHello.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\csvdi.DESKTOP-JC86JS6\\.nuget\\packages\\mysqlconnector\\2.1.6\\mysqlconnector.2.1.6.nupkg.sha512",
-    "C:\\Users\\csvdi.DESKTOP-JC86JS6\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    "C:\\Users\\csvdi.DESKTOP-JC86JS6\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\csvdi.DESKTOP-JC86JS6\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.24\\microsoft.netcore.app.host.win-x64.3.1.24.nupkg.sha512"
   ],
   "logs": []
 }

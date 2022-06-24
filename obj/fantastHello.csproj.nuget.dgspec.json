@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Cursos\\SenacEAD\\PI\\Etapa-4\\fantastHello\\fantastHello.csproj": {}
+    "E:\\Cursos\\SenacEAD\\PI-2\\Et-5\\fantastHello\\fantastHello.csproj": {}
   },
   "projects": {
-    "E:\\Cursos\\SenacEAD\\PI\\Etapa-4\\fantastHello\\fantastHello.csproj": {
+    "E:\\Cursos\\SenacEAD\\PI-2\\Et-5\\fantastHello\\fantastHello.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Cursos\\SenacEAD\\PI\\Etapa-4\\fantastHello\\fantastHello.csproj",
+        "projectUniqueName": "E:\\Cursos\\SenacEAD\\PI-2\\Et-5\\fantastHello\\fantastHello.csproj",
         "projectName": "fantastHello",
-        "projectPath": "E:\\Cursos\\SenacEAD\\PI\\Etapa-4\\fantastHello\\fantastHello.csproj",
+        "projectPath": "E:\\Cursos\\SenacEAD\\PI-2\\Et-5\\fantastHello\\fantastHello.csproj",
         "packagesPath": "C:\\Users\\csvdi.DESKTOP-JC86JS6\\.nuget\\packages\\",
-        "outputPath": "E:\\Cursos\\SenacEAD\\PI\\Etapa-4\\fantastHello\\obj\\",
+        "outputPath": "E:\\Cursos\\SenacEAD\\PI-2\\Et-5\\fantastHello\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\csvdi.DESKTOP-JC86JS6\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +36,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MySqlConnector": {
               "target": "Package",
@@ -51,6 +53,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.24, 3.1.24]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -59,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

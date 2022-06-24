@@ -1,0 +1,48 @@
+@media (min-width: 992px) and (max-width: 1200px){
+  .back-to-top {
+    right: 3rem;
+}
+
+.backgroundFinal {
+  width: 389.46%;
+
+  margin-inline: -33%;
+}
+
+.icon-cart {
+  left: 46.89rem;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+  .back-to-top {
+    right: 3rem;
+}
+
+.icon-cart {
+  left: 46.89rem;
+}
+
+  .backgroundFinal {
+    width: 388.46%;
+
+    margin-inline: -33%;
+}
+}
+
+
+@media (min-width: 576px) and (max-width: 768px){
+  .back-to-top {
+    right: 3rem;
+}
+
+.icon-cart {
+  left: 47.89rem;
+}
+
+.backgroundFinal {
+  width: 388.46%;
+
+  margin-inline: -32%;
+}
+}

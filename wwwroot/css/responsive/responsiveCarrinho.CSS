@@ -1,0 +1,98 @@
+@media (min-width: 992px) and (max-width: 1200px){
+  .row {
+    margin-right: -171px;
+}
+
+.back-to-top {
+  right: 3%;
+}
+
+a.regNew {
+  top: -1rem;
+}
+
+.card-body {
+  left: 5rem;
+}
+
+.backgroundFinal {
+  width: 386.8%;
+
+  margin-inline: -32%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+  .card-body {
+    left: 8rem;
+    padding: 0.25rem;
+    top: 7rem;
+}
+
+a.regNew {
+  top: -1rem;
+}
+
+.back-to-top {
+  right: 2%;
+
+}
+
+.backgroundFinal {
+  width: 396.8%;
+
+  margin-inline: -34%;
+}
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+
+  .logo {
+    left: 7.5rem;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  left: -11rem;
+}
+
+.article-ne {
+  left: -16.06rem;
+
+  margin-bottom: -9rem;
+  top: 2rem;
+}
+
+.card-body {
+    top: -3rem;
+    left: 9rem;
+}
+
+h1 {
+  top: 0.25rem;
+  left: 23rem;
+}
+
+.list-group-item {
+  left: -10rem;
+  top: -29rem;
+
+  margin-top: 411px;
+}
+
+a.regNew {
+    top: -30rem;
+    left: 3rem;
+}
+
+.back-to-top {
+  right: 4%;
+}
+
+.backgroundFinal {
+  top: 0rem;
+
+  width: 408.8%;
+
+  margin-inline: -53%;
+}
+}

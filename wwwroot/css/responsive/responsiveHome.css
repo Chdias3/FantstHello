@@ -1,0 +1,561 @@
+@media (min-width: 350px) and (max-width: 576px){
+  *{
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #0c0c0c;
+}
+
+  .logo {
+    margin-left: 5.175rem;
+
+    top: 4rem;
+}
+
+.icon-cart {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  margin-left: -8.815rem;
+  position: relative;
+
+  top: 3.5rem;
+
+  z-index: 400;
+}
+
+.navbar {
+  width: 32.375rem;
+  
+  padding-right: 28.75rem;
+
+  margin-top: -0.3rem;
+  margin-left: 83.185rem;
+  left: 10rem
+  ;
+  position: fixed;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.4rem;
+  font-size: 1rem;
+  
+  background-color: #e61410;
+  border: 1px solid #d36d01;
+
+}
+
+.navbar-light .navbar-toggler {
+  color: rgb(66 2 2);
+  border-color: rgb(223 78 6);
+}
+
+.bg-white {
+  background-color: #0e0b0b00 !important;
+}
+
+
+.fundo {
+  position: fixed;
+  height: 11%;
+  z-index: 100;
+  top: 0rem;
+  background-color: black;
+  left: 0%;
+  width: 97%;
+}
+
+.navbar-collapse {
+  background-color: #0e0e17;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  background-color: #0e0e17;
+}
+
+.maindiv {
+  width: 203%;
+  height: 17%;
+
+  left: 122%;
+  top: 16%;
+}
+
+.u {
+  width: 41.7rem;
+
+  left: 4.125rem;
+
+  top: 33.4rem;
+}
+
+.imgHerry {
+  position: relative;
+  
+  top: 13rem;
+  left: 35%;
+
+  border-radius: 1rem;
+}
+
+img.imgHerry.Book {
+  top: 11.5rem;
+}
+
+p.textBook {
+  left: 14.6rem;
+  top: 12.5rem;
+
+  height: 5rem;
+  font-size: 2rem;
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+img.imgHerry.shop {
+  position: relative;
+  top: 383%;
+  left: -73%;
+
+  border-radius: 1rem;
+}
+
+p.textShop {
+  height: 5rem;
+ 
+  font-size: 2rem;
+  top: 107.3rem;
+  right: 72.8%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+
+p.textHerry {
+  height: 5rem;
+  font-size: 2rem;
+ 
+  top: 14rem;
+  left: 35%;
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.dolls {
+  width: 1790px;
+  height: 18.4%;
+
+  left: 137%;
+  top: 99.6%;
+
+  border-radius: 1rem;
+}
+
+.textAbout {
+  position: relative;
+
+  top: 129rem;
+  left: 5%;
+
+  width: 247%;
+}
+
+.about {
+  left: 36.125rem;
+}
+
+section#contact {
+    top: 141.9rem;
+    left: 5%;
+
+    width: 273%;
+}
+
+.contact {
+    top: 132.5rem;
+    left: 38.125rem;
+
+    height: 5rem;
+}
+
+
+section.grid3::before {
+    height: 62.6%;
+    width: 1606px;
+
+    background: #000000;
+
+    top: 102.99%;
+    left: 0.7%;
+}
+
+img.backgroundGhost {
+    top: 140rem;
+    left: 33rem;
+}
+
+footer.section {
+  top: 145.625rem;
+  left: 45%;
+}
+
+footer .logo {
+  top: -2rem;
+}
+
+.logo-alt {
+  left: -6.9rem;
+}
+
+.backgroundFinal {
+  top: 141.5rem;
+  width: 1693px;
+
+  margin-inline: -38%;
+}
+}
+
+
+
+@media (min-width: 576px) and (max-width: 768px){
+
+
+ /* logo  */
+ nav .logo {
+  margin-left: -6.825rem;
+ }
+
+/* logo  */
+.icon-cart {
+  margin-left: 48.185rem;
+}
+
+/* menu  */
+header ul.navbar-nav.flex-grow-1 {
+  white-space: nowrap;
+}
+
+/* carrousel  */
+.maindiv {
+  width: 131%;
+  height: 12%;
+ 
+  top: 13%;
+  left: 82.599%;
+}
+
+/* imagem de fundo    */
+section.grid3::before {
+  height: 37.6%;
+  width: 143%;
+
+  top: 20.5%;
+  left: 108px;
+}
+
+
+.u {
+  top: 22.1rem;
+  left: -0.875rem;
+}
+
+
+.dolls {
+  /* width: 830px;
+
+  left: 581px;
+  top: 50.6%; */
+
+  width: 107%;
+  left: 82%;
+  top: 50.6%;
+}
+
+/* sobre  */
+.textAbout {
+  margin-right: -28rem;
+}
+
+/* contato  */
+section#contact {
+  margin-right: -34rem;
+}
+
+/* imagem de fundo final   */
+.backgroundFinal {
+  width: 1442px;
+  
+  margin-inline: -38%;
+}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 992px){
+
+  .logo {
+    margin-left: -7.825rem;
+}
+
+.icon-cart {
+  margin-left: 66.185rem;
+
+}
+
+/* menu  */
+header ul.navbar-nav.flex-grow-1 {
+  white-space: nowrap;
+}
+
+
+.navbar {
+  margin-left: -17.875rem;
+
+  width: 105.375rem;
+}
+
+
+.maindiv {
+  width: 129%;
+  height: 39%;
+
+  left: 74%;
+  top: 40%;
+}
+
+.u {
+  top: 37.4rem;
+  left: auto;
+
+  position: absolute;
+
+  width: 100%;
+}
+
+section.grid3::before {
+  width: 129.8%;
+  height: 119.6%;
+ 
+  left: auto;
+  top: 61.99%;
+}
+
+.imgHerry {
+  width: 56%;
+}
+
+p.textHerry {
+  width: 56%;
+}
+
+img.imgHerry.shop {
+  position: absolute;
+  right: 4.6rem;
+  width: 60%;
+  height: 653%;
+  top: 26.4rem;
+}
+
+p.textShop {
+  top: 46.6rem;
+  width: 60.2%;
+  left: 32.4%;
+}
+
+img.imgHerry.Book {
+  position: absolute;
+  right: -14rem;
+  width: 60%;
+  top: 0.5rem;
+}
+
+p.textBook {
+  left: 62.4%;
+  width: 60.3%;
+  top: 22.8rem;
+}
+
+.dolls {
+  width: 126%;
+  height: 41.4%;
+ 
+  left: 75.5%;
+  top: 160.6%;
+}
+
+.about {
+  top: -7.99rem;
+  left: 32.125rem;
+  
+}
+
+.textAbout {
+  margin-right: -27rem;
+
+  position: absolute;
+
+  top: 129rem;
+  left: 24%;
+}
+
+.contact {
+  top: 140.25rem;
+  left: 34.125rem;
+}
+
+section#contact {
+  width: 131.8%;
+
+  position: absolute;
+
+  top: 175.9rem;
+  left: 24%;
+}
+
+img.backgroundGhost {
+  top: 179rem;
+}
+
+footer.section {
+  top: 184.625rem;
+  left: 12%;
+}
+
+footer .logo {
+  margin-left: 0.175rem;
+}
+
+.back-to-top {
+  right: 3rem;
+}
+
+.backgroundFinal {
+  width: 275.34%;
+
+  margin-inline: -41%;
+
+  top: 172.69rem;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+  .logo {
+    margin-left: -6.825rem;
+}
+
+.icon-cart {
+  margin-left: 73.185rem;
+}
+
+.navbar {
+  width: 111.375rem;
+}
+
+ul.navbar-nav.flex-grow-1 {
+  left: -10rem;
+}
+
+.maindiv {
+  width: 110%;
+ 
+  left: 55%;
+}
+
+section.grid3::before {
+  height: 36.7%;
+  width: 111%;
+}
+
+.u {
+  top: 29rem;
+  left: 0rem;
+  width: 32.7rem;
+}
+
+img.imgHerry.Book {
+  right: -36rem;
+  top: -26.1rem;
+}
+
+p.textBook {
+  left: 35.96rem;
+  top: -25.1rem;
+}
+
+.dolls {
+  width: 109%;
+
+  left: 55%;
+  top: 50%;
+}
+
+section.grid3.out::before {
+  height: 36.4%;
+}
+
+.dolls.out {
+  top: 50%;
+}
+
+.grid3-item.out:nth-child(1) {
+  grid-row: 1 / 3;
+  top: 27.8rem;
+}
+
+img.imgHerry.Book.out {
+  position: relative;
+  right: -36rem;
+  top: -27.3rem;
+}
+
+p.textBook.out {
+  position: relative;
+  left: 36rem;
+  top: -26.3rem;
+}
+
+.about {
+  left: 38.125rem;
+}
+
+.textAbout {
+  margin-right: -27rem;
+  left: -3%;
+}
+
+.contact {
+  left: 37.125rem;
+}
+
+section#contact {
+  width: 166%;
+  left: -2%;
+}
+
+footer .logo {
+  margin-left: 0.175rem;
+}
+
+footer.section {
+  left: 15%;
+}
+
+img.backgroundGhost {
+  left: 27rem;
+}
+
+.back-to-top {
+  right: 5rem;
+}
+
+.backgroundFinal {
+  width: 207.34%;
+
+  margin-inline: -28%;
+}
+}

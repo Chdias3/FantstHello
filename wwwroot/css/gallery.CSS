@@ -28,6 +28,7 @@ img.ga1 {
 p.p1 {
   position: relative;
   width: 19rem;
+  top: 0rem;
 }
 
 img.ga2 {
@@ -41,6 +42,7 @@ p.p2 {
   position: relative;
   width: 19rem;
   left: -6rem;
+  top: 0rem;
 }
 
 img.ga3 {

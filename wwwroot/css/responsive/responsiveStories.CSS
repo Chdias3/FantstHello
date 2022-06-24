@@ -1,0 +1,80 @@
+
+@media (min-width: 576px) {
+
+  /* imagem final  */
+  .responsiveBack .backgroundFinal {
+    width: 332.46%;
+  
+    margin-inline: -33%;
+  }
+
+  
+  /* linha divisoria  */
+  .dividers hr.skullcenter {
+    margin-right: -40.8rem;
+}
+
+/* menu  */
+header ul.navbar-nav.flex-grow-1 {
+  white-space: nowrap;
+}
+}
+
+
+@media (min-width: 992px) {
+  
+  header ul.navbar-nav.flex-grow-1 {
+    left: 6rem;
+}
+
+
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px){
+  img.imgWitch {
+    top: 8rem;
+    left: 18rem;
+  }
+
+  .back-to-top {
+    right: 15rem;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+  img.imgWitch {
+    top: 8rem;
+    left: 18rem;
+  }
+
+  .back-to-top {
+    right: 15rem;
+}
+
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+  img.imgWitch {
+    top: 8rem;
+    left: 18rem;
+  }
+
+  .back-to-top {
+    right: 15rem;
+}
+
+img.imgJack2 {
+  left: 30.4rem;
+}
+
+img.skull1 {
+  top: -6.6rem;
+}
+
+img.skull4 {
+  top: -7.99rem;
+}
+
+}

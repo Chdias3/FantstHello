@@ -6,146 +6,152 @@
 
 <link rel="stylesheet" href="~/assets/fonts/style.css">
 <link rel="stylesheet" href="~/CSS/home.CSS">
+<link rel="stylesheet" href="~/CSS/responsive/responsiveHome.CSS">
 
 @* logo ------------- *@
-<nav class="logo-cart">
-  @* logo ------------- *@
-  <div>
-    <a href="/Home/home">
-      <img class="logo" src="/CSS/img/logo.jpeg" />
-    </a>
-  </div>
-
-  @* carrinho ------- *@
-  <div>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link text-dark " href="~/itemOrder/List">
-          <img class="icon-cart" src="~/CSS/img/cart.png" />
+<div class="fundo">
+  <nav class="logo-cart container-fluid">
+    @* logo ------------- *@
+    <div class="row">
+      <div class="col">
+        <a href="/Home/home">
+          <img class="logo" src="/CSS/img/logo.jpeg" />
         </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+      </div>
+    </div>
 
-@* menu ---------- *@
-<header>
-  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-        <ul class="navbar-nav flex-grow-1">
-
+    @* carrinho ------- *@
+    <div class="row">
+      <div class="col">
+        <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#about"><strong> Sobre
-              </strong></a>
+            <a class="nav-link text-dark " href="~/itemOrder/List">
+              <img class="icon-cart" src="~/CSS/img/cart.png" />
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Home" asp-action="stories"><strong> Historias
-              </strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="/itemOrder/Insert/#books3"><strong> Livros
-              </strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="itemOrder" asp-action="Insert"><strong> Acessorios
-              </strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Home" asp-action="articles"><strong> Artigos
-              </strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Home" asp-action="gallery"><strong> Galeria de foto
-              </strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" asp-controller="Home" asp-action="galleryVideo"><strong> Galeria de video
-              </strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="#contactNow"><strong> Contato</strong></a>
-          </li>
-
-          @if (Context.Session.GetInt32("IdUsuario") == null)
-          {
-            <li class="nav-item">
-              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Insert"><strong>
-                  Cadastrar usuario</strong></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Login"><strong>
-                  Login</strong></a>
-            </li>
-          }
-          else
-          {
-            <li class="nav-item">
-              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="List"><strong> Lista de
-                  usuarios </strong></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Logout"><strong>
-                  Logout</strong></a>
-            </li>
-          }
-
-
         </ul>
       </div>
     </div>
   </nav>
-</header>
+
+  @* menu ---------- *@
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+          <ul class="navbar-nav flex-grow-1">
+
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#about"><strong> Sobre
+                </strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-controller="Home" asp-action="stories"><strong> Historias
+                </strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/itemOrder/Insert/#books3"><strong> Livros
+                </strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-controller="itemOrder" asp-action="Insert"><strong> Acessorios
+                </strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-controller="Home" asp-action="articles"><strong> Artigos
+                </strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-controller="Home" asp-action="gallery"><strong> Galeria de foto
+                </strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-controller="Home" asp-action="galleryVideo"><strong> Galeria de video
+                </strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#contactNow"><strong> Contato</strong></a>
+            </li>
+
+            @if (Context.Session.GetInt32("IdUsuario") == null)
+            {
+              <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Insert"><strong>
+                    Cadastrar usuario</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Login"><strong>
+                    Login</strong></a>
+              </li>
+            }
+            else
+            {
+              <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="List"><strong> Usuarios
+                    cadastrados </strong></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="UserClient" asp-action="Logout"><strong>
+                    Logout</strong></a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
 
 @* imagens em sliders dinamicos------------- *@
-<div>
+<div id="sliderHome">
   <a asp-controller="itemOrder" asp-action="Insert">
     <div class="maindiv"></div>
   </a>
 </div>
 
+
 @* imagens ------------- *@
-<section class="grid3">
-  <a class="nav-link " href="/itemOrder/Insert/#dollsHarry2">
-    <div class="u grid3-item">
+<div id="imgHome">
 
-      <img class="imgHerry" src="~/CSS/img/herry.jpg" />
-      <p class="textHerry">Bonecos Harry Potter</p>
+  <section class="grid3">
+    <a class="nav-link " href="/itemOrder/Insert/#dollsHarry2">
+      <div class="u grid3-item">
+        <img class="imgHerry" src="~/CSS/img/herry.jpg" />
+        <p class="textHerry">Bonecos Harry Potter</p>
+      </div>
+    </a>
+    <a class="nav-link " asp-controller="Home" asp-action="gallery">
+      <div class="u grid3-item">
+        <img class="imgHerry shop" src="~/CSS/img/shop.jpg" />
+        <p class="textShop">Nossa loja</p>
+      </div>
+    </a>
+    <a class="nav-link" href="/itemOrder/Insert/#books3">
+      <div class="u grid3-item">
+        <img class="imgHerry Book" src="~/CSS/img/book.jpg" />
+        <p class="textBook">Livros halloween</p>
+      </div>
+    </a>
+  </section>
 
-    </div>
-  </a>
-  <a class="nav-link " asp-controller="Home" asp-action="gallery">
-    <div class="u grid3-item">
-      <img class="imgHerry" src="~/CSS/img/shop.jpg" />
-      <p class="textShop">Nossa loja</p>
-    </div>
-  </a>
-  <a class="nav-link" href="/itemOrder/Insert/#books3">
-    <div class="u grid3-item">
+</div>
 
-      <img class="imgHerry Book" src="~/CSS/img/book.jpg" />
-      <p class="textBook">Livros halloween</p>
-
-    </div>
-  </a>
-</section>
-
-<div>
+<div id="dolls">
   <a href="/itemOrder/Insert/#dolls4">
     <div class="dolls"></div>
   </a>
 </div>
 
 @* texto sobre ---------------- *@
-<div class="textAbout">
+<div id="textAbout" class="textAbout" onclick="moreRedA()">
   <img id="about" class="about" src="~/CSS/img/about.jpeg" alt="">
   <h2 style="text-align: left;">Acessorios de Halloween e muito mais</h2>
-  <p align="justify"> Os historiadores atribuem que o Halloween foi resultado da mistura de
+  <p calign="justify"> Os historiadores atribuem que o Halloween foi resultado da mistura de
     traços de
     uma cultura
     religiosa pagã e cristã. A origem pagã do Halloween está relacionado com o Samhain, um festival dedicado a colheita
@@ -176,8 +182,37 @@
     Caso você tenha a oportunidade de nos passar na Fantasthello, em São Paulo, na avenida Club, diretamente na
     autoestrada, a maior loja de Halloween de São Paulo espera por você, o que oferece tudo em um pequeno ambiente faz
     seu
-    coração bater mais rápido como um fã de Halloween.
+    coração bater mais rápido como um fã de Halloween.<span id="stitches">...<span class="cor" onclick="moreRedC()">Ver
+        mais >>
+        <img class="gif" src="https://media.giphy.com/media/V0GmsUma6XslhShJTT/giphy.gif" width="100" alt="">
+      </span></span>
+    <span id="More">
+      <br /><br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+      dolor veritatis veniam sint saepe aperiam amet quisquam ut magni
+      nostrum. Cupiditate vero accusamus illum in excepturi delectus,
+      obcaecati aspernatur saepe.Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Sunt dolor veritatis veniam sint
+      saepe aperiam amet quisquam ut magni nostrum. Cupiditate vero
+      accusamus illum in excepturi delectus, obcaecati aspernatur
+      saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Sunt dolor veritatis veniam sint saepe aperiam amet quisquam ut
+      magni nostrum. Cupiditate vero accusamus illum in excepturi
+      delectus, obcaecati aspernatur saepe
+      <br /><br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+      dolor veritatis veniam sint saepe aperiam amet quisquam ut magni
+      nostrum. Cupiditate vero accusamus illum in excepturi delectus,
+      obcaecati aspernatur saepe.Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Sunt dolor veritatis veniam sint
+      saepe aperiam amet quisquam ut magni nostrum. Cupiditate vero
+      accusamus illum in excepturi delectus, obcaecati aspernatur
+      saepe.<span class="cor" onclick="moreRedC()">Ver menos >></span>
+      <img class="aboutFundo" src="~/CSS/img/backgroundFinal.jpeg" alt="">
+    </span>
   </p>
+  <a id="see"></a>
+
 </div>
 
 <!-- contato -->
@@ -234,3 +269,7 @@
 </footer>
 
 <img class="backgroundFinal" src="~/CSS/img/backgroundFinal.jpeg" />
+<!-- seta para cima -->
+<abbr title="Mover para cima">
+  <a href="#" class="back-to-top">
+    <img class="moveSet" src="~/CSS/img/seta.png" alt="Icone de seta" /> </a></abbr>

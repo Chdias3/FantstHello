@@ -1,0 +1,19 @@
+@media (min-width: 992px) and (max-width: 1200px){
+  .icon-cart {
+    left: 46.89rem;
+}
+
+  .back-to-top {
+    right: 3rem;
+}
+
+.backgroundFinal {
+  width: 387.46%;
+
+  margin-inline: -32%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+
+}
